@@ -4,7 +4,10 @@ import os
 
 def readMd(file):
     with open(file) as f:
-        ...
+        msg = ''
+        for line in f.readlines(): msg += line + '\\n'
+
+        return msg
 
 def makeJson(args, usefile):
     if usefile:
@@ -25,10 +28,6 @@ def main():
     args = parser.parse_args()
     usefile = True if args.file else False
     url = args.url
-
-    if usefile:
-        print("Feature not supported yet")
-        return
 
     makeJson(args, usefile)
 
