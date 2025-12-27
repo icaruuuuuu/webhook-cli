@@ -1,5 +1,5 @@
 # Webhook-cli
-A cli tool that sends messages through Discord webhooks
+A linux cli tool that sends messages through Discord webhooks
 
 
 ## Dependencies
