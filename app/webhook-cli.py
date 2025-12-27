@@ -15,7 +15,7 @@ def makeJson(args, usefile):
     else:
         msg = args.message
 
-    with open('tmp.json', 'w') as t:
+    with open('/tmp/tmp.json', 'w') as t:
         t.write('{\n\t"content":' + f'"{msg}"' + '\n}\n')
         
 
@@ -31,7 +31,7 @@ def main():
 
     makeJson(args, usefile)
 
-    exit_status = os.system(f'curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data @tmp.json {url}')
+    exit_status = os.system(f'curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data @/tmp/tmp.json {url}')
     print(exit_status)
 
 
